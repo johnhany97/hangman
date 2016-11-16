@@ -104,6 +104,7 @@ end
 def output(attempts, characters)
   # TODO 2: Iterate over the characters and print them. Then, print
   # the remaining attempts
+  puts HANGMANPICS[attempts]
   for i in 0...(characters.length) do
     print characters[i]
   end
@@ -151,6 +152,7 @@ def game_loop
   if is_solved word, characters then
     puts "You have won with #{ATTEMPTS-attempts} wrong attempts!"
   else
+    puts HANGMANPICS[0]
     puts "You have lost."
   end
 end
