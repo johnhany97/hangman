@@ -48,8 +48,8 @@ end
 # The basic game logic: Keep asking for characters until dead or won
 def game_loop
   
-  words = ["COM1001", "Hello", "Sheffield"]
-  word = words.sample
+  words = File.readlines('words.txt')
+  word = words.sample.chomp
   characters = Array.new word.length, "_"
   attempts = ATTEMPTS
 
