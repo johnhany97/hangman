@@ -35,10 +35,10 @@ def update_and_check(characters, word, guess)
   found = false
   (0...word.length).each do |w|                      
     # TODO 3: Make the check case insensitive
-    if word[w] == guess
+    if word[w].downcase == guess.downcase
       found = true
       # Update the characters array
-      characters[w] = word[w]
+      characters[w] = word[w].downcase
     end
   end
   return found
