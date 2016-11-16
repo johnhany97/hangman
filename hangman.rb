@@ -10,7 +10,7 @@ def is_solved(word, characters)
   # Return false if there is at least one mismatch
   #
   for i in 0...(word.length) do
-    if (word[i].downcase != characters[i])
+    if (word[i].downcase != characters[i].downcase)
       return false
     end
   end
@@ -38,7 +38,7 @@ def update_and_check(characters, word, guess)
     if word[w].downcase == guess.downcase
       found = true
       # Update the characters array
-      characters[w] = word[w].downcase
+      characters[w] = word[w]
     end
   end
   return found
