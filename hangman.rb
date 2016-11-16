@@ -9,6 +9,11 @@ def is_solved(word, characters)
   # Return true if all characters match
   # Return false if there is at least one mismatch
   #
+  for i in 0..(word.length) do
+    if (word[i] != characters[i])
+      return false
+    end
+  end
   return true
 end
 
