@@ -21,6 +21,11 @@ end
 def output(attempts, characters)
   # TODO 2: Iterate over the characters and print them. Then, print
   # the remaining attempts
+  for i in 0..(characters.length) do
+    print characters[i]
+  end
+  puts ""
+  puts "Remaining attempts: " + attempts.to_s
 end
 
 # Checks if a guessed character occurs in the word.
@@ -69,4 +74,3 @@ end
 
 # TODO 4: After each completed game, ask the player if they want to
 # play another game. If not, quit. If yes, start another game.
-
